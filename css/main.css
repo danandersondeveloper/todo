@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+p,
+span {
+	color: #fff;
+}
+
+svg {
+	color: #fff
+}
+
+#app {
+	display: flex;
+	width: 100%;
+    height: 100%;
+}
+
+#main-menu {
+	display: flex;
+    max-width: 300px;
+    width: 100%;
+	padding: 15px;
+	background: #282828;
+}
+
+.main-menu.hide {
+	transform: translate(-300px, 0px)
+}
+
+.secondary-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.user .icon {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 100%;
+	margin-right: 10px;
+}
+
+.main-menu.hide .action-icons {
+    position: absolute;
+    left: 310px;
+}
+
+.action-icons .close {
+	cursor: pointer;
+}
+
+#main-menu .container {
+	width: 100%;
+}
+
+#main-content {
+	width: 100%;
+	background: #1e1e1e;
+}
+
+.main-menu.hide ~ #main-content {
+	width: calc(100% + 300px);
+	margin-left: -300px;
+}
