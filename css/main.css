@@ -2,6 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+	overflow: hidden;
 }
 
 body {
@@ -75,10 +76,40 @@ svg {
 
 #main-content {
 	width: 100%;
+	display: flex;
 	background: #1e1e1e;
 }
 
 .main-menu.hide ~ #main-content {
 	width: calc(100% + 300px);
 	margin-left: -300px;
+}
+
+#main-content .container {
+	max-width: 760px;
+    width: 100%;
+    margin: 45px auto;
+}
+
+#add-new-task {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	cursor: pointer;
+}
+
+.add-new-task.hide {
+	display: none !important;
+}
+
+#add-new-task .plus {
+	margin-right: 10px;
+}
+
+.new-task {
+	display: none;
+}
+
+.new-task.show {
+	display: block;
 }
